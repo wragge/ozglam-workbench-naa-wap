@@ -94,7 +94,7 @@ def make_summary_all(df):
     
 def display_summary_all(df):
     summary = make_summary_all(df)
-    display(HTML('<h1>Summary of all harvested series</h1>'))
+    display(HTML('<h2>Aggregated totals</h2>'))
     table = '<table class="table" style="text-align: left">'
     table += '<tr><th style="text-align: left">Total items</th><td style="text-align: left">{:,}</td></tr>'.format(summary['total_items'])
     table += '<tr><th style="text-align: left">Access status</th><td></td></tr>'
