@@ -7,7 +7,11 @@ This is a collection of [Jupyter](http://jupyter.org/) notebooks to help you exp
 
 This repository includes item-level metadata from 23 series harvested from the National Archives online database RecordSearch. The complete code for harvesting and processing the data is included, as are some examples of how the data can be analysed. The harvested metadata is available as CSV-formatted files (one for each series) in the data directory.
 
-![Screen capture of summary table](https://dl.dropbox.com/s/btfz59wlqii9mrj/naa-wap-series.png)
+To browse information about the harvested series start with the [summary of all harvested series notebook](https://nbviewer.jupyter.org/github/wragge/ozglam-workbench-naa-wap/blob/master/RecordSearch/Summary%20of%20all%20harvested%20series.ipynb) (this link will open using Jupyter's nbviewer). There you'll find a live version of the table below with links to individual series summaries and visualisations.
+
+[![Screen capture of summary table](https://dl.dropbox.com/s/btfz59wlqii9mrj/naa-wap-series.png)](https://nbviewer.jupyter.org/github/wragge/ozglam-workbench-naa-wap/blob/master/RecordSearch/Summary%20of%20all%20harvested%20series.ipynb)
+
+
 
 ## Support me
 
@@ -24,8 +28,8 @@ You can view the contents on GitHub, but note that these will be static versions
 If you have Jupyter installed, you can clone this repository, and then run Jupyter:
 
 ```
-git clone https://github.com/wragge/ozglam-workbench.git
-cd ozglam-workbench
+git clone https://github.com/wragge/ozglam-workbench-naa-wap.git
+cd ozglam-workbench-naa-wap
 jupyter notebook
 ```
 
@@ -33,28 +37,6 @@ jupyter notebook
 
 To use a live version without installing any software, try MyBinder:
 
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/wragge/ozglam-workbench/master)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/wragge/ozglam-workbench-naa-wap/master)
 
 MyBinder launches the notebooks in a custom computing environment with all the software you'll need pre-installed. But note that these environments aren't persistent, so you'll need to make sure you download any data you want to keep.
-
-### Run locally with Docker
-
-I've created a Docker image that includes these notebooks and all the necessary software. Assuming you have Docker installed, just open up a terminal and run:
-
-``` shell
-docker run -it --name=Workbench -v WorkbenchData:/home/jovyan/workbench -p 8888:8888 wragge/ozglam-workbench
-```
-
-This creates a persistent data volume and runs the workbench image. Once Jupyter starts up it'll display a url in the terminal that looks something like:
-
-```
-http://localhost:8888/?token=262718512d11cc3efcb1b2878f4jja9uca071924e328d554
-```
-
-Just copy and paste this into your browser to open the notebooks.
-
-To restart the `WorkBench` container using the same data volume:
-
-``` shell
-docker start -ai Workbench
-```
