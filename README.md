@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3549592.svg)](https://doi.org/10.5281/zenodo.3549592)
+
 # OzGLAM data repository workbench
 ## Series in the National Archives of Australia relating to the White Australia Policy
 
